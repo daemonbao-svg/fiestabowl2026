@@ -4,10 +4,12 @@ import TicketTracker from '@/components/TicketTracker'
 import TravelHub from '@/components/TravelHub'
 import FanBettingWidget from '@/components/FanBettingWidget'
 import StickyConversionBar from '@/components/StickyConversionBar'
+import SchemaOrg from '@/components/SchemaOrg'
 
 export default function Home() {
     return (
         <main>
+            <SchemaOrg />
             <HeroSection />
             <TicketTracker />
             <LiveStreamSelector />

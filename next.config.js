@@ -4,10 +4,6 @@ const nextConfig = {
         unoptimized: true,
     },
     trailingSlash: true,
-    eslint: {
-        // Allow production builds to complete even with ESLint errors
-        ignoreDuringBuilds: true,
-    },
     typescript: {
         // !! WARN !!
         // Dangerously allow production builds to successfully complete even if

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: '2026 Fiesta Bowl: Miami vs Ole Miss - Tickets, Watch Live & Travel',
-    description: 'The ultimate fan guide for the 2026 Fiesta Bowl (Miami Hurricanes vs Ole Miss Rebels). Get last-minute tickets, find Vrbo rentals near State Farm Stadium, and watch the live stream online.',
+    title: '2026 Fiesta Bowl: Miami vs Ole Miss Tickets & Fan Guide',
+    description: 'Get 2026 Fiesta Bowl tickets (Miami vs Ole Miss), watch the live stream, and find rentals near State Farm Stadium in this ultimate fan guide and travel hub.',
     keywords: ['Fiesta Bowl 2026', 'Miami vs Ole Miss', 'Fiesta Bowl tickets', 'watch Fiesta Bowl live', 'State Farm Stadium parking', 'Vrbo Glendale AZ'],
     openGraph: {
         title: '2026 Fiesta Bowl: Miami vs Ole Miss',
@@ -27,4 +27,13 @@ export const metadata: Metadata = {
         images: ['/images/og-image.jpg'],
     },
     metadataBase: new URL('https://fiestabowl2026.live'),
+    alternates: {
+        canonical: '/',
+    },
+    verification: {
+        google: '在这里输入您的 Google Search Console 验证代码',
+    },
+    other: {
+        "impact-site-verification": "7854510",
+    },
 }
