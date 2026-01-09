@@ -1,11 +1,11 @@
-import { supabase, supabaseAdmin, AffiliateClick, PageView, TicketPrice } from '../supabase'
+import { getSupabase, getSupabaseAdmin, AffiliateClick, PageView, TicketPrice } from '../supabase'
 
 /**
  * Track an affiliate link click
  */
 export async function trackClick(data: Omit<AffiliateClick, 'id' | 'created_at'>) {
     try {
-        const { data: result, error } = await supabase
+        const { data: result, error } = await getSupabase()
             .from('affiliate_clicks')
             .insert([data])
             .select()
@@ -28,7 +28,7 @@ export async function trackClick(data: Omit<AffiliateClick, 'id' | 'created_at'>
  */
 export async function getClickStats(slug?: string) {
     try {
-        let query = supabase
+        let query = getSupabase()
             .from('affiliate_click_stats')
             .select('*')
 
@@ -55,7 +55,7 @@ export async function getClickStats(slug?: string) {
  */
 export async function getDailyTrends(days: number = 7) {
     try {
-        const { data, error } = await supabase
+        const { data, error } = await getSupabase()
             .from('daily_click_trends')
             .select('*')
             .limit(days * 10) // Approximate, as we have multiple categories per day
@@ -77,7 +77,7 @@ export async function getDailyTrends(days: number = 7) {
  */
 export async function trackPageView(data: Omit<PageView, 'id' | 'created_at'>) {
     try {
-        const { data: result, error } = await supabase
+        const { data: result, error } = await getSupabase()
             .from('page_views')
             .insert([data])
             .select()
@@ -100,7 +100,7 @@ export async function trackPageView(data: Omit<PageView, 'id' | 'created_at'>) {
  */
 export async function updateTicketPrices(prices: Omit<TicketPrice, 'id' | 'updated_at'>[]) {
     try {
-        const admin = supabaseAdmin()
+        const admin = getSupabaseAdmin()
 
         const { data, error } = await admin
             .from('ticket_prices')
@@ -124,7 +124,7 @@ export async function updateTicketPrices(prices: Omit<TicketPrice, 'id' | 'updat
  */
 export async function getRecentPrices() {
     try {
-        const { data, error } = await supabase
+        const { data, error } = await getSupabase()
             .from('ticket_prices')
             .select('*')
             .order('updated_at', { ascending: false })
@@ -155,7 +155,7 @@ export async function getRecentPrices() {
  */
 export async function getTotalClicks() {
     try {
-        const { count, error } = await supabase
+        const { count, error } = await getSupabase()
             .from('affiliate_clicks')
             .select('*', { count: 'exact', head: true })
 
@@ -176,7 +176,7 @@ export async function getTotalClicks() {
  */
 export async function getClicksByCategory() {
     try {
-        const { data, error } = await supabase
+        const { data, error } = await getSupabase()
             .from('affiliate_clicks')
             .select('category')
 

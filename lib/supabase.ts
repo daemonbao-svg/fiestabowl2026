@@ -4,12 +4,29 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 
-// Create a single supabase client for interacting with your database
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// Create a lazy supabase client for interacting with your database
+let supabaseInstance: any = null
+
+export const getSupabase = () => {
+    if (supabaseInstance) return supabaseInstance
+
+    if (!supabaseUrl) {
+        throw new Error('NEXT_PUBLIC_SUPABASE_URL is not defined')
+    }
+    if (!supabaseAnonKey) {
+        throw new Error('NEXT_PUBLIC_SUPABASE_ANON_KEY is not defined')
+    }
+
+    supabaseInstance = createClient(supabaseUrl, supabaseAnonKey)
+    return supabaseInstance
+}
 
 // Server-side client with service role key (for admin operations)
-export const supabaseAdmin = () => {
+export const getSupabaseAdmin = () => {
     const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+    if (!supabaseUrl) {
+        throw new Error('NEXT_PUBLIC_SUPABASE_URL is not defined')
+    }
     if (!serviceRoleKey) {
         throw new Error('SUPABASE_SERVICE_ROLE_KEY is not defined')
     }

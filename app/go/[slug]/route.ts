@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+
+export const dynamic = 'force-dynamic'
+
 import { getRedirectUrl } from '@/lib/affiliateLinks'
 import { trackClick } from '@/lib/db/queries'
 

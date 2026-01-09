@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+
+export const dynamic = 'force-dynamic'
+
 import { trackClick, trackPageView } from '@/lib/db/queries'
 
 export async function POST(request: NextRequest) {
