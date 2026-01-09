@@ -34,6 +34,6 @@ export const metadata: Metadata = {
         google: '在这里输入您的 Google Search Console 验证代码',
     },
     other: {
-        "impact-site-verification": "7854510",
+        "impact-site-verification": "997fbd4e-025b-4aef-86bd-a8391dc97c4a",
     },
 }
