@@ -78,6 +78,15 @@ Add these environment variables to Vercel to activate your revenue links. If you
 - 在品牌详情页，找到 **Tracking Link** 或 **Media Property ID**。
 - 通常 ID 会包含在生成的 URL 中（如 `sid=12345` 或链接中的一段特定字符）。
 
+### Google Maps 报错处理 (`RefererNotAllowedMapError`)
+如果你在网站上看到 "Google Maps didn't load correctly"，通常是因为 API Key 限制了域名：
+1. 前往 Google Cloud Console 的 **Credentials** 页面。
+2. 点击你的 API Key 进入编辑页面。
+3. 在 **Website restrictions** 下，确保添加了：
+   - `https://www.fiestabowl2026.live/*`
+   - `https://fiestabowl2026.live/*`
+4. 保存后可能需要 5 分钟生效。
+
 #### 2. CJ Affiliate (Vrbo, Expedia, Hotels.com)
 - 登录 [CJ.com](https://www.cj.com/)。
 - 前往 **Account > Network Profile**。

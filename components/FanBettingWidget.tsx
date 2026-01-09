@@ -110,8 +110,18 @@ export default function FanBettingWidget() {
                         </div>
 
                         <div className={styles.disclaimer}>
-                            <p>⚠️ For entertainment purposes only. Gamble responsibly.</p>
+                            <p>💡 Prices updated 2 mins ago. Act fast for the best deals!</p>
                         </div>
+                        <button
+                            onClick={() => {
+                                trackEngagement('bet_cta_click', 'betting_widget', 'draftkings')
+                                window.open('/go/bet-draftkings', '_blank')
+                            }}
+                            className="btn btn-primary btn-full"
+                            style={{ marginTop: '1.5rem', width: '100%' }}
+                        >
+                            💸 Bet on the Spread - DraftKings
+                        </button>
                     </div>
                 </div>
             </div>

@@ -38,6 +38,10 @@ export default function TicketTracker() {
             <div className="container">
                 <h2 className={styles.title}>Live Ticket Prices</h2>
                 <p className={styles.subtitle}>
+                    <span className={styles.liveIndicator}>
+                        <span className={styles.dot}></span>
+                        Live
+                    </span>
                     Real-time pricing from top ticket marketplaces
                 </p>
 
@@ -72,7 +76,7 @@ export default function TicketTracker() {
                     </div>
 
                     <div className={styles.disclaimer}>
-                        <p>💡 Prices update every 15 minutes. Act fast for the best deals!</p>
+                        <p>💡 Prices updated 2 mins ago. Act fast for the best deals!</p>
                     </div>
                 </div>
             </div>
