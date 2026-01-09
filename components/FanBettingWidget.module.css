@@ -1,0 +1,188 @@
+.section {
+    padding: var(--spacing-2xl) 0;
+    background: var(--color-dark);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--color-gray);
+    margin-bottom: var(--spacing-xl);
+}
+
+.widgetGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.pollCard,
+.oddsCard {
+    background: var(--color-dark-secondary);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
+
+.spreadInfo {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-miami-orange);
+    margin-bottom: var(--spacing-lg);
+}
+
+.voteButtons {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.voteButton {
+    flex: 1;
+    padding: var(--spacing-lg);
+    background: var(--glass-bg);
+    border: 3px solid;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-family: var(--font-display);
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.voteButton:not(:disabled):hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.voteButton:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.voteButton.selected {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-glow);
+}
+
+.teamName {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.percentage {
+    font-size: 2rem;
+    font-weight: 900;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.voteResults {
+    margin-top: var(--spacing-md);
+}
+
+.resultBar {
+    height: 12px;
+    background: var(--color-dark);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    margin-bottom: var(--spacing-sm);
+}
+
+.resultFill {
+    height: 100%;
+    transition: width 0.5s ease;
+    border-radius: var(--radius-sm);
+}
+
+.voteCount {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    margin: 0;
+}
+
+.oddsTable {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.oddsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--glass-bg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+}
+
+.oddsLabel {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-miami-orange);
+}
+
+.oddsValues {
+    display: flex;
+    gap: var(--spacing-md);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.oddsValues span {
+    padding: 0.5rem 1rem;
+    background: var(--color-dark);
+    border-radius: var(--radius-sm);
+}
+
+.disclaimer {
+    padding: var(--spacing-md);
+    background: rgba(206, 17, 38, 0.1);
+    border-radius: var(--radius-md);
+    border-left: 4px solid var(--color-olemiss-red);
+    text-align: center;
+}
+
+.disclaimer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--color-light-gray);
+}
+
+@media (max-width: 768px) {
+    .widgetGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .voteButtons {
+        flex-direction: column;
+    }
+
+    .oddsValues {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
