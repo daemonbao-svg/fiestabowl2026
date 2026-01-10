@@ -14,7 +14,9 @@ export default function HeroSection() {
     useEffect(() => {
         const updateCountdown = () => {
             const now = new Date()
-            if (now < kickoffDate) {
+            if (gameData.game.isComplete) {
+                setTimeUntilKickoff('🏆 Miami Wins!')
+            } else if (now < kickoffDate) {
                 setTimeUntilKickoff(formatDistanceToNow(kickoffDate, { addSuffix: true }))
             } else {
                 setTimeUntilKickoff('Game in progress!')
@@ -98,10 +100,10 @@ export default function HeroSection() {
                             onClick={() => handleCTAClick('tickets-stubhub', 'tickets')}
                             className={`btn btn-primary btn-large ${styles.ctaButton} pulse glow`}
                         >
-                            <span className={styles.ctaIcon}>🎟️</span>
+                            <span className={styles.ctaIcon}>🏆</span>
                             <div className={styles.ctaText}>
-                                <span className={styles.ctaLabel}>Get Last Minute Tickets</span>
-                                <span className={styles.ctaSubtext}>Starting from $240</span>
+                                <span className={styles.ctaLabel}>购买迈阿密夺冠纪念品</span>
+                                <span className={styles.ctaSubtext}>Miami Championship Gear</span>
                             </div>
                         </button>
 

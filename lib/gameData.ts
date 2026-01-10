@@ -23,6 +23,12 @@ export const gameData = {
         kickoffTime: '2026-01-09T19:00:00-07:00', // 7:00 PM MST
         spread: 'Miami -2.5',
         overUnder: '54.5',
+        isComplete: true,
+        winner: 'miami',
+        finalScore: {
+            miami: 31,
+            oleMiss: 24,
+        },
     },
     venue: {
         name: 'State Farm Stadium',

@@ -6,17 +6,18 @@ import { trackAffiliateClick } from '@/lib/analytics'
 import styles from './StickyConversionBar.module.css'
 
 export default function StickyConversionBar() {
-    const [isVisible, setIsVisible] = useState(false)
+    const [isMobile, setIsMobile] = useState(false)
     const lowestPrice = getLowestPrice()
 
     useEffect(() => {
-        const handleScroll = () => {
-            // Show bar after scrolling 300px
-            setIsVisible(window.scrollY > 300)
+        // Check if mobile on mount and resize
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768)
         }
 
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
     }, [])
 
     const handleClick = () => {
@@ -24,15 +25,18 @@ export default function StickyConversionBar() {
         window.open('/go/tickets-stubhub', '_blank')
     }
 
+    // Always show on mobile, hide on desktop
+    if (!isMobile) return null
+
     return (
-        <div className={`${styles.stickyBar} ${isVisible ? styles.visible : ''}`}>
+        <div className={styles.stickyBar}>
             <div className={styles.content}>
                 <div className={styles.info}>
-                    <span className={styles.label}>🎟️ Tickets from</span>
-                    <span className={styles.price}>${lowestPrice}</span>
+                    <span className={styles.label}>🏆 Championship Gear</span>
+                    <span className={styles.price}>from ${lowestPrice}</span>
                 </div>
                 <button onClick={handleClick} className={`btn btn-primary ${styles.ctaButton}`}>
-                    Buy Now
+                    Get Tickets
                 </button>
             </div>
         </div>
