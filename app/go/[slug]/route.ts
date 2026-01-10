@@ -36,6 +36,7 @@ export async function GET(
         else if (slug.includes('watch') || slug.includes('fubo') || slug.includes('hulu') || slug.includes('sling')) category = 'streaming'
         else if (slug.includes('vrbo') || slug.includes('hotel') || slug.includes('expedia')) category = 'accommodation'
         else if (slug.includes('parking')) category = 'parking'
+        else if (slug.includes('bet')) category = 'betting'
         else if (slug.includes('gear') || slug.includes('miami') || slug.includes('olemiss')) category = 'merchandise'
 
         // Track asynchronously (fire and forget)

@@ -6,6 +6,8 @@ import TravelHub from '@/components/TravelHub'
 import FanBettingWidget from '@/components/FanBettingWidget'
 import StickyConversionBar from '@/components/StickyConversionBar'
 import SchemaOrg from '@/components/SchemaOrg'
+import AIAnalysisSection from '@/components/AIAnalysisSection'
+import FAQ from '@/components/FAQ'
 
 export default function Home() {
     return (
@@ -13,10 +15,12 @@ export default function Home() {
             <SchemaOrg />
             <AnnouncementBanner />
             <HeroSection />
+            <AIAnalysisSection />
             <TicketTracker />
             <LiveStreamSelector />
             <TravelHub />
             <FanBettingWidget />
+            <FAQ />
             <StickyConversionBar />
         </main>
     )

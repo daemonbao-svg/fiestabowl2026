@@ -1,0 +1,99 @@
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.card {
+    padding: var(--spacing-xl);
+    border: 1px solid var(--color-miami-orange);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.aiBadge {
+    background: var(--color-miami-orange);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.analysisGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--spacing-xl);
+}
+
+.statBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statLabel {
+    color: var(--color-gray);
+    font-size: 0.9rem;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-white);
+}
+
+.progressBar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progressFill {
+    height: 100%;
+    background: var(--color-miami-orange);
+}
+
+.predictionBox h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.predictionBox ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.predictionBox li {
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--color-gray);
+}
+
+.predictionBox li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-miami-orange);
+}
+
+.footer {
+    margin-top: var(--spacing-lg);
+    font-size: 0.8rem;
+    color: var(--color-gray);
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .analysisGrid {
+        grid-template-columns: 1fr;
+    }
+}

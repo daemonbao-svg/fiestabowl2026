@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { gameData } from '@/lib/gameData'
@@ -44,14 +45,16 @@ export default function HeroSection() {
 
                         <div className={styles.teams}>
                             <div className={styles.team}>
-                                <img
-                                    src={gameData.teams.miami.logo}
-                                    alt={gameData.teams.miami.name}
-                                    className={styles.teamLogo}
-                                    onError={(e) => {
-                                        e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect fill="%23F47321" width="100" height="100"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="24" font-weight="bold"%3EM%3C/text%3E%3C/svg%3E'
-                                    }}
-                                />
+                                <div className={styles.logoWrapper}>
+                                    <Image
+                                        src={gameData.teams.miami.logo}
+                                        alt={`${gameData.teams.miami.name} Logo`}
+                                        width={100}
+                                        height={100}
+                                        priority
+                                        className={styles.teamLogo}
+                                    />
+                                </div>
                                 <div className={styles.teamInfo}>
                                     <h2>{gameData.teams.miami.shortName}</h2>
                                     <p>{gameData.teams.miami.record}</p>
@@ -61,14 +64,16 @@ export default function HeroSection() {
                             <div className={styles.vs}>VS</div>
 
                             <div className={styles.team}>
-                                <img
-                                    src={gameData.teams.oleMiss.logo}
-                                    alt={gameData.teams.oleMiss.name}
-                                    className={styles.teamLogo}
-                                    onError={(e) => {
-                                        e.currentTarget.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect fill="%23CE1126" width="100" height="100"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="24" font-weight="bold"%3EOM%3C/text%3E%3C/svg%3E'
-                                    }}
-                                />
+                                <div className={styles.logoWrapper}>
+                                    <Image
+                                        src={gameData.teams.oleMiss.logo}
+                                        alt={`${gameData.teams.oleMiss.name} Logo`}
+                                        width={100}
+                                        height={100}
+                                        priority
+                                        className={styles.teamLogo}
+                                    />
+                                </div>
                                 <div className={styles.teamInfo}>
                                     <h2>{gameData.teams.oleMiss.shortName}</h2>
                                     <p>{gameData.teams.oleMiss.record}</p>

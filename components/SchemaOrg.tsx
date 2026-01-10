@@ -1,7 +1,7 @@
 import { gameData } from '@/lib/gameData'
 
 export default function SchemaOrg() {
-    const jsonLd = {
+    const eventJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'SportsEvent',
         'name': `${gameData.game.title}: ${gameData.teams.miami.name} vs ${gameData.teams.oleMiss.name}`,
@@ -40,10 +40,55 @@ export default function SchemaOrg() {
         }
     }
 
+    const faqJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        'mainEntity': [
+            {
+                '@type': 'Question',
+                'name': 'How can I buy tickets for the National Championship 2026 in Miami?',
+                'acceptedAnswer': {
+                    '@type': 'Answer',
+                    'text': 'Tickets for the 2026 National Championship at Hard Rock Stadium can be purchased through our verified ticket partners like StubHub and Vivid Seats.'
+                }
+            },
+            {
+                '@type': 'Question',
+                'name': 'Where is the CFP National Championship 2026 located?',
+                'acceptedAnswer': {
+                    '@type': 'Answer',
+                    'text': 'The 2026 College Football Playoff National Championship will be held at Hard Rock Stadium in Miami Gardens, Florida.'
+                }
+            }
+        ]
+    }
+
+    const orgJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        'name': 'Fiesta Bowl 2026 Fan Guide',
+        'url': 'https://fiestabowl2026.live',
+        'logo': 'https://fiestabowl2026.live/images/logo.png',
+        'sameAs': [
+            'https://twitter.com/fiestabowl',
+            'https://www.facebook.com/fiestabowl'
+        ]
+    }
+
     return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+            />
+        </>
     )
 }
