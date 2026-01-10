@@ -15,6 +15,52 @@
     margin-bottom: var(--spacing-xl);
 }
 
+.championshipCallout {
+    margin-bottom: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, rgba(244, 115, 33, 0.1) 0%, rgba(0, 80, 48, 0.1) 100%);
+    border: 2px solid var(--color-miami-orange);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.calloutHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.calloutIcon {
+    font-size: 2.5rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.calloutHeader h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--color-miami-orange);
+}
+
+.calloutText {
+    font-size: 1.15rem;
+    color: var(--color-white);
+    margin-bottom: var(--spacing-lg);
+}
+
+.calloutButtons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.calloutButtons .btn {
+    min-width: 200px;
+}
+
+
 .travelGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));

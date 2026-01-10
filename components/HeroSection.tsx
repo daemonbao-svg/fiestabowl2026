@@ -97,10 +97,21 @@ export default function HeroSection() {
                         <h3 className={styles.ctaTitle}>Quick Actions</h3>
 
                         <button
-                            onClick={() => handleCTAClick('tickets-stubhub', 'tickets')}
+                            onClick={() => handleCTAClick('championship-tickets', 'tickets')}
                             className={`btn btn-primary btn-large ${styles.ctaButton} pulse glow`}
                         >
                             <span className={styles.ctaIcon}>🏆</span>
+                            <div className={styles.ctaText}>
+                                <span className={styles.ctaLabel}>National Championship Tickets</span>
+                                <span className={styles.ctaSubtext}>CFP Final @ Hard Rock Stadium</span>
+                            </div>
+                        </button>
+
+                        <button
+                            onClick={() => handleCTAClick('miami-gear', 'tickets')}
+                            className={`btn btn-secondary btn-large ${styles.ctaButton}`}
+                        >
+                            <span className={styles.ctaIcon}>👕</span>
                             <div className={styles.ctaText}>
                                 <span className={styles.ctaLabel}>购买迈阿密夺冠纪念品</span>
                                 <span className={styles.ctaSubtext}>Miami Championship Gear</span>

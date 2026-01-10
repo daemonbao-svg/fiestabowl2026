@@ -21,8 +21,8 @@ export default function StickyConversionBar() {
     }, [])
 
     const handleClick = () => {
-        trackAffiliateClick('tickets-stubhub', 'tickets', 'sticky_bar')
-        window.open('/go/tickets-stubhub', '_blank')
+        trackAffiliateClick('championship-tickets', 'tickets', 'sticky_bar')
+        window.open('/go/championship-tickets', '_blank')
     }
 
     // Always show on mobile, hide on desktop
@@ -32,7 +32,7 @@ export default function StickyConversionBar() {
         <div className={styles.stickyBar}>
             <div className={styles.content}>
                 <div className={styles.info}>
-                    <span className={styles.label}>🏆 Championship Gear</span>
+                    <span className={styles.label}>🏆 Championship Tickets</span>
                     <span className={styles.price}>from ${lowestPrice}</span>
                 </div>
                 <button onClick={handleClick} className={`btn btn-primary ${styles.ctaButton}`}>

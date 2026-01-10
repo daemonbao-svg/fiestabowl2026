@@ -55,6 +55,36 @@ export const affiliateLinks: Record<string, AffiliateLink> = {
         subId: 'fiesta_parking',
     },
 
+    // Betting
+    'bet-draftkings': {
+        url: `https://sportsbook.draftkings.com/leagues/football/ncaaf?wpsrc=${process.env.NEXT_PUBLIC_DRAFTKINGS_AFFILIATE_ID}`,
+        subId: 'fiesta_betting_draftkings',
+    },
+
+    // Championship Tickets (CFP National Championship @ Hard Rock Stadium)
+    'championship-tickets': {
+        url: `https://www.stubhub.com/college-football-playoff-national-championship-tickets/performer/12345/?sid=${process.env.NEXT_PUBLIC_STUBHUB_AFFILIATE_ID}`,
+        subId: 'championship_tickets',
+    },
+    'championship-tickets-vivid': {
+        url: `https://www.vividseats.com/college-football-playoff-national-championship-tickets.html?wsUser=${process.env.NEXT_PUBLIC_VIVID_SEATS_AFFILIATE_ID}`,
+        subId: 'championship_tickets',
+    },
+
+    // Miami Hotels (for Championship Game)
+    'miami-hotels': {
+        url: `https://www.hotels.com/search.do?destination=Miami%2C%20Florida&affiliateId=${process.env.NEXT_PUBLIC_EXPEDIA_AFFILIATE_ID}`,
+        subId: 'championship_miami_hotels',
+    },
+    'miami-vrbo': {
+        url: `https://www.vrbo.com/search/keywords:miami-florida-united-states-of-america?adultsCount=2&petIncluded=false&ssr=true&affiliateId=${process.env.NEXT_PUBLIC_VRBO_AFFILIATE_ID}`,
+        subId: 'championship_miami_vrbo',
+    },
+    'miami-expedia': {
+        url: 'https://www.expedia.com/Miami-Hotels.d178286.Travel-Guide-Hotels',
+        subId: 'championship_miami_expedia',
+    },
+
     // Merchandise
     'miami-gear': {
         url: 'https://www.fanatics.com/college/miami-hurricanes/o-16+t-45041405+z-9150-3509039443',

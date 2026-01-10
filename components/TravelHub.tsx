@@ -21,8 +21,33 @@ export default function TravelHub() {
             <div className="container">
                 <h2 className={styles.title}>Travel & Accommodation</h2>
                 <p className={styles.subtitle}>
-                    Everything you need for your Fiesta Bowl experience
+                    Fiesta Bowl victory secured! Now book for the National Championship in Miami
                 </p>
+
+                {/* Championship Hotels Callout */}
+                <div className={`${styles.championshipCallout} glass-card`}>
+                    <div className={styles.calloutHeader}>
+                        <span className={styles.calloutIcon}>🏆</span>
+                        <h3>Miami Hosts the Championship!</h3>
+                    </div>
+                    <p className={styles.calloutText}>
+                        Book your Miami hotels now for the CFP National Championship at Hard Rock Stadium
+                    </p>
+                    <div className={styles.calloutButtons}>
+                        <button
+                            onClick={() => handleAccommodationClick('miami-hotels', 'championship_hotels')}
+                            className="btn btn-primary"
+                        >
+                            🏨 Miami Hotels
+                        </button>
+                        <button
+                            onClick={() => handleAccommodationClick('miami-vrbo', 'championship_vrbo')}
+                            className="btn btn-secondary"
+                        >
+                            🏠 Miami Vacation Rentals
+                        </button>
+                    </div>
+                </div>
 
                 <div className={styles.travelGrid}>
                     {/* Accommodation */}

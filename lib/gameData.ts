@@ -74,3 +74,25 @@ export const getInitialScore = (): LiveScore => ({
     possession: null,
     lastUpdate: new Date().toISOString(),
 })
+
+// Championship Game Information
+export const championshipData = {
+    game: {
+        title: 'CFP National Championship',
+        venue: 'Hard Rock Stadium',
+        location: 'Miami Gardens, FL',
+        date: '2026-01-20', // Typical championship date
+        teams: {
+            miami: 'Miami Hurricanes',
+            opponent: 'TBD', // Will be determined after other semifinal
+        },
+    },
+    venue: {
+        name: 'Hard Rock Stadium',
+        address: '347 Don Shula Dr, Miami Gardens, FL 33056',
+        coordinates: {
+            lat: 25.958,
+            lng: -80.2389,
+        },
+    },
+}
