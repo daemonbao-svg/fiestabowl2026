@@ -8,6 +8,8 @@ import StickyConversionBar from '@/components/StickyConversionBar'
 import SchemaOrg from '@/components/SchemaOrg'
 import AIAnalysisSection from '@/components/AIAnalysisSection'
 import FAQ from '@/components/FAQ'
+import BlogCTA from '@/components/BlogCTA'
+import RelatedResources from '@/components/RelatedResources'
 
 export default function Home() {
     return (
@@ -16,11 +18,13 @@ export default function Home() {
             <AnnouncementBanner />
             <HeroSection />
             <AIAnalysisSection />
+            <BlogCTA />
             <TicketTracker />
             <LiveStreamSelector />
             <TravelHub />
             <FanBettingWidget />
             <FAQ />
+            <RelatedResources />
             <StickyConversionBar />
         </main>
     )
