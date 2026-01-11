@@ -17,7 +17,7 @@ export const gameData = {
         },
     },
     game: {
-        title: '2026 Fiesta Bowl',
+        title: 'National Championship 2026',
         venue: 'State Farm Stadium',
         location: 'Glendale, AZ',
         kickoffTime: '2026-01-09T19:00:00-07:00', // 7:00 PM MST

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Miami Hurricanes vs Ole Miss | 2026 National Championship Tickets & AI Fan Guide',
+    title: 'National Championship 2026: Miami vs Ole Miss | Tickets, Travel & AI Guide',
     description: 'The definitive AI-powered guide for Miami Hurricanes fans heading to the 2026 National Championship at Hard Rock Stadium. Get tickets, travel info, and live predictions.',
     keywords: [
         'Fiesta Bowl 2026 Winner',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         'College Football Playoff Final 2026'
     ],
     openGraph: {
-        title: 'Miami Hurricanes: Road to the 2026 National Championship',
+        title: 'National Championship 2026: Miami Hurricanes vs Ole Miss',
         description: 'AI-simulated insights, tickets, and travel guide for the 2026 Miami championship run.',
         type: 'website',
         locale: 'en_US',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: '2026 Fiesta Bowl: Miami vs Ole Miss',
+        title: 'National Championship 2026: Miami vs Ole Miss | CFP Final',
         description: 'Tickets, travel, and watch options for the big game.',
         images: ['/images/og-image.jpg'],
     },
